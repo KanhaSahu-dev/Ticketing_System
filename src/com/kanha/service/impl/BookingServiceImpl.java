@@ -1,4 +1,4 @@
-package com.shashi.service.impl;
+package com.kanha.service.impl;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-import com.shashi.beans.HistoryBean;
-import com.shashi.beans.TrainException;
-import com.shashi.constant.ResponseCode;
-import com.shashi.service.BookingService;
-import com.shashi.utility.DBUtil;
+import com.kanha.beans.HistoryBean;
+import com.kanha.beans.TrainException;
+import com.kanha.constant.ResponseCode;
+import com.kanha.service.BookingService;
+import com.kanha.utility.DBUtil;
 
 //Service Implementaion class for booking details of the ticket
 //Creates the booking history and save to database

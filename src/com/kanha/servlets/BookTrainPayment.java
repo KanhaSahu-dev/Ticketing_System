@@ -1,4 +1,4 @@
-package com.shashi.servlets;
+package com.kanha.servlets;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.shashi.constant.UserRole;
-import com.shashi.utility.TrainUtil;
+import com.kanha.constant.UserRole;
+import com.kanha.utility.TrainUtil;
 
 @WebServlet("/payment")
 public class BookTrainPayment extends HttpServlet {

@@ -1,4 +1,4 @@
-package com.shashi.servlets;
+package com.kanha.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.shashi.beans.TrainBean;
-import com.shashi.beans.TrainException;
-import com.shashi.service.TrainService;
-import com.shashi.service.impl.TrainServiceImpl;
+import com.kanha.beans.TrainBean;
+import com.kanha.beans.TrainException;
+import com.kanha.service.TrainService;
+import com.kanha.service.impl.TrainServiceImpl;
 
 @SuppressWarnings("serial")
 @WebServlet("/updatetrainschedule")

@@ -1,4 +1,4 @@
-package com.shashi.constant;
+package com.kanha.constant;
 
 import java.util.Arrays;
 import java.util.Optional;

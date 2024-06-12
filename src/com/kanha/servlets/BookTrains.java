@@ -1,4 +1,4 @@
-package com.shashi.servlets;
+package com.kanha.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,16 +13,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.shashi.beans.HistoryBean;
-import com.shashi.beans.TrainBean;
-import com.shashi.beans.TrainException;
-import com.shashi.constant.ResponseCode;
-import com.shashi.constant.UserRole;
-import com.shashi.service.BookingService;
-import com.shashi.service.TrainService;
-import com.shashi.service.impl.BookingServiceImpl;
-import com.shashi.service.impl.TrainServiceImpl;
-import com.shashi.utility.TrainUtil;
+import com.kanha.beans.HistoryBean;
+import com.kanha.beans.TrainBean;
+import com.kanha.beans.TrainException;
+import com.kanha.constant.ResponseCode;
+import com.kanha.constant.UserRole;
+import com.kanha.service.BookingService;
+import com.kanha.service.TrainService;
+import com.kanha.service.impl.BookingServiceImpl;
+import com.kanha.service.impl.TrainServiceImpl;
+import com.kanha.utility.TrainUtil;
 
 @SuppressWarnings("serial")
 @WebServlet("/booktrains")
@@ -54,8 +54,11 @@ public class BookTrains extends HttpServlet {
 			java.util.Date utilDate;
 			String date = LocalDate.now().toString();
 			utilDate = inputFormat.parse(journeyDate);
-			date = outputFormat.format(utilDate);
-
+			date = inputFormat.format(utilDate);
+			System.out.println(date+" This is the date given.");
+			System.out.println(utilDate);
+			System.out.println(inputFormat);
+			System.out.println(outputFormat);
 			TrainBean train = trainService.getTrainById(trainNo);
 
 			if (train != null) {
@@ -68,8 +71,12 @@ public class BookTrains extends HttpServlet {
 					avail = avail - seat;
 					train.setSeats(avail);
 					String responseCode = trainService.updateTrain(train);
+					System.out.println(responseCode+" this is the response code");
+					System.out.println(ResponseCode.SUCCESS.toString());
+					System.out.println("seats are:- "+seat);
+					System.out.println("seats avail are:- "+avail+seat);
 					if (ResponseCode.SUCCESS.toString().equalsIgnoreCase(responseCode)) {
-
+						System.err.println("This is printing");
 						HistoryBean bookingDetails = new HistoryBean();
 						Double totalAmount = train.getFare() * seat;
 						bookingDetails.setAmount(totalAmount);

@@ -1,4 +1,4 @@
-package com.shashi.servlets;
+package com.kanha.servlets;
 
 import java.io.IOException;
 

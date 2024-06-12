@@ -1,12 +1,12 @@
-package com.shashi.utility;
+package com.kanha.utility;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-import com.shashi.beans.TrainException;
-import com.shashi.constant.ResponseCode;
+import com.kanha.beans.TrainException;
+import com.kanha.constant.ResponseCode;
 
 public class DBUtil {
 	private static Connection con;
